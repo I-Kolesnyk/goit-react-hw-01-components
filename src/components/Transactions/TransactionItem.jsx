@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import { TableRowCell, TableRow } from './Transactions.styled';
 
 export function TransactionItem({ id, type, amount, currency }) {
   return (
-    <tr key={id}>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+    <TableRow key={id}>
+      <TableRowCell>{type}</TableRowCell>
+      <TableRowCell>{amount}</TableRowCell>
+      <TableRowCell>{currency}</TableRowCell>
+    </TableRow>
   );
 }
 

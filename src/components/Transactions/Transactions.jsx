@@ -1,16 +1,21 @@
 import PropTypes from 'prop-types';
 import { TransactionItem } from '../Transactions/TransactionItem';
+import {
+  TransactionsTable,
+  TableHead,
+  TableHeadCell,
+} from './Transactions.styled';
 
 export function Transactions({ transactions }) {
   return (
-    <table class="transaction-history">
-      <thead>
+    <TransactionsTable>
+      <TableHead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <TableHeadCell>Type</TableHeadCell>
+          <TableHeadCell>Amount</TableHeadCell>
+          <TableHeadCell>Currency</TableHeadCell>
         </tr>
-      </thead>
+      </TableHead>
 
       <tbody>
         {transactions.map(({ id, type, amount, currency }) => (
@@ -22,7 +27,7 @@ export function Transactions({ transactions }) {
           />
         ))}
       </tbody>
-    </table>
+    </TransactionsTable>
   );
 }
 
