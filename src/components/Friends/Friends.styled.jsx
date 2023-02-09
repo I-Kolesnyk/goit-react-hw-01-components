@@ -37,8 +37,8 @@ export const Status = styled.span`
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: ${({ children }) => {
-    return children ? 'green' : 'red';
+  background-color: ${({ isOnline }) => {
+    return isOnline ? 'green' : 'red';
   }};
 `;
 

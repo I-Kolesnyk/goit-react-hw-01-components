@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { FriendsListItem, Status, Avatar, FriendName } from './Friends.styled';
 
-export function FriendListItem({ id, avatar, name, isOnline }) {
+export function FriendListItem({ avatar, name, isOnline }) {
   return (
-    <FriendsListItem key={id}>
-      <Status>{isOnline}</Status>
+    <FriendsListItem>
+      <Status isOnline={isOnline} />
       <Avatar src={avatar} alt="User avatar" />
       <FriendName>{name}</FriendName>
     </FriendsListItem>

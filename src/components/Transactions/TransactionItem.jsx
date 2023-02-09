@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { TableRowCell, TableRow } from './Transactions.styled';
 
-export function TransactionItem({ id, type, amount, currency }) {
+export function TransactionItem({ type, amount, currency }) {
   return (
-    <TableRow key={id}>
+    <TableRow>
       <TableRowCell>{type}</TableRowCell>
       <TableRowCell>{amount}</TableRowCell>
       <TableRowCell>{currency}</TableRowCell>

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { StatListItem, Label, Percentage } from './Statistics.styled';
 
-export function StatisticsItem({ id, label, percentage }) {
+export function StatisticsItem({ label, percentage }) {
   return (
-    <StatListItem key={id}>
+    <StatListItem>
       <Label>{label}</Label>
       <Percentage>{percentage}%</Percentage>
     </StatListItem>

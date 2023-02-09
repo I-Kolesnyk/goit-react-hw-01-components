@@ -34,7 +34,10 @@ export function Transactions({ transactions }) {
 Transactions.propType = {
   transactions: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
-    })
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    }).isRequired
   ).isRequired,
 };
